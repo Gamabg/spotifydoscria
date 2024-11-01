@@ -1,12 +1,14 @@
-import mongoose, {mongo} from "mongoose";
-
-const astistaSchema = new mongoose.Schema({
-    id: {type: mongoose.Schema.Types.ObjectId},
-    nome: {type: String, require: true},
-    genero: {type: String},
-    sobre: {type: String}
+import mongoose from "mongoose";
+ 
+const artistaSchema = new mongoose.Schema({
+    id:{type: mongoose.Schema.Types.ObjectId},
+    name:{type: String, required: true},
+    genero:{type: String},
+    bio:{type: String},
+    imagem:{type: String},
+    capa:{type: String}
 })
-
-const artista = mongoose.model('artistas', astistaSchema);
-
+ 
+const artista = mongoose.model('artistas', artistaSchema)
+ 
 export default artista;
